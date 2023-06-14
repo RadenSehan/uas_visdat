@@ -18,9 +18,10 @@ tab1.markdown("Esports (olahraga elektronik) adalah bentuk kompetisi olahraga ya
 st.sidebar.markdown("## Filter Column")
 
 #tab2
+view_all = st.sidebar.checkbox("View all data")
 tab2.title("Data Earnings Esports")
 genre_filter = st.sidebar.selectbox("Filter by Genre", options=df['Genre'].unique())
-view_all = st.sidebar.checkbox("View all data")
+
 if view_all:
     tab2.dataframe(df)
 
